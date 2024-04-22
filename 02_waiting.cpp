@@ -18,7 +18,7 @@ struct new_thread_func {
   new_thread_func(int& i_):i(i_) {} 
 
   // The action to be taken when the thread is spawned
-  // This is a functor 
+  // This is a functor -> ()()
   void operator ()() {
     for (unsigned j = 0; j < 10; ++j) {
       new_thread_do_something (i);
